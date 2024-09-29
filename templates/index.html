@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-content">
+            <p></p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question-component">
+            <div class="label">Question</div>
+            <div id="question" class="question"></div>
+
+            <div class="label" style="margin-top: 20px;">Answer</div>
+            <textarea id="answer" class="answer-field"></textarea>
+
+            <div class="button-container">
+                <button id="ask-button" class="button button-ask">Ask</button>
+                <button id="submit-button" class="button button-submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="response-component">
+            <div class="label">AI Coach Response</div>
+            <div id="ai-response" class="output-container"></div>
+
+            <div class="response-details">
+                <span id="ask-count">You have used AI coach 0 times</span>
+                <button id="clear-button" class="button button-clear">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
